@@ -39,10 +39,9 @@ make
 python3 convert.py <model_folder../os_model/sqlcoder-34b-alpha> --outfile ./models/sqlcoder-34b-alpha/ggml-sqlcoder-34b-f16.gguf --outtype f16
 ```
 
-8. Now let's quantize the above generated model to q4_k. You can qunatize it to q8_0 for better performance(to do it replace q4_k with q8_0 in the below code). 
+8. Now let's quantize the above generated model to q4_k. You can quantize it to q8_0 for better performance(to do it replace q4_k with q8_0 in the below code). 
 ```bash
 ./quantize ./models/sqlcoder-34b-alpha/ggml-sqlcoder-34b-f16.gguf ./models/sqlcoder-34b-alpha/ggml-sqlcoder-34b-q4_k.gguf.bin q4_k
 ```
 
 9. We can use this model for various text-generation tasks. The model downloaded performs well for the task of natural language to SQL query generation.
-
